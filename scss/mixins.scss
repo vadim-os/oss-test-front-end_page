@@ -1,0 +1,22 @@
+@mixin border-bg-padding {
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+@mixin min-max-width {
+  width: 100%;
+  max-width: 928px;
+  min-width: 320px;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

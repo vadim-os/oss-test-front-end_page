@@ -1,0 +1,84 @@
+@import "mixins.scss";
+
+.welcome {
+  @include min-max-width;
+  @include flex-row;
+  @include border-bg-padding;
+  margin-bottom: 14px;
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 224px;
+    height: 168px;
+  }
+
+  &__img {
+    width: 104px;
+    height: 80px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    @include flex-column;
+    margin-left: 8px;
+  }
+
+  &__header {
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+  }
+
+  &__text {
+    height: 100px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #343433;
+    text-align: justify;
+    text-indent: 2em;
+    margin-top: 13px;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 568px) {
+  .welcome {
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 8px;
+
+    &__images {
+      height: 320px;
+    }
+
+    &__img {
+      min-width: 40%;
+      height: 50%;
+      max-height: 156px;
+      flex-grow: 1;
+      margin: 0;
+      object-fit: cover;
+
+      &:nth-child(odd) {
+        margin-right: 8px;
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__content {
+      margin: 14px 0 0;
+    }
+  }
+}
